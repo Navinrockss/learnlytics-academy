@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Excel Quiz | Learnlytics Academy</title>
+
+<style>
+    body {
+        font-family: 'Inter', Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #ffffff;
+        color: #1A1A1A;
+        line-height: 1.6;
+    }
+
+    header {
+        text-align: center;
+        padding: 40px 20px;
+        border-bottom: 1px solid #eee;
+    }
+
+    h1 {
+        font-size: 36px;
+        color: #0F3057;
+        margin-bottom: 10px;
+    }
+
+    .container {
+        max-width: 800px;
+        width: 90%;
+        margin: auto;
+        padding: 40px 0;
+    }
+
+    .question-box {
+        background: #F4F7FB;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        border: 1px solid #ddd;
+    }
+
+    .btn {
+        display: block;
+        width: 200px;
+        margin: 20px auto;
+        padding: 12px;
+        background: #FFCA28;
+        color: #0F3057;
+        border: none;
+        border-radius: 8px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    #result {
+        text-align: center;
+        margin-top: 30px;
+        font-size: 24px;
+        color: #1E88E5;
+        font-weight: bold;
+    }
+
+    footer {
+        text-align: center;
+        padding: 25px;
+        background: #F4F7FB;
+        margin-top: 40px;
+        font-size: 14px;
+        color: #0F3057;
+    }
+</style>
+
+</head>
+<body>
+
+<header>
+    <h1>Excel Quiz</h1>
+    <p>Test your knowledge with simple Excel questions</p>
+</header>
+
+<div class="container">
+
+    <!-- QUIZ QUESTIONS -->
+    <form id="quizForm">
+
+        <div class="question-box">
+            <p><b>1. What does the SUM() function do?</b></p>
+            <label><input type="radio" name="q1" value="a"> Finds the average</label><br>
+            <label><input type="radio" name="q1" value="b"> Adds numbers together</label><br>
+            <label><input type="radio" name="q1" value="c"> Finds the largest value</label>
+        </div>
+
+        <div class="question-box">
+            <p><b>2. Shortcut for creating a table?</b></p>
+            <label><input type="radio" name="q2" value="a"> Ctrl + A</label><br>
+            <label><input type="radio" name="q2" value="b"> Ctrl + T</label><br>
+            <label><input type="radio" name="q2" value="c"> Ctrl + Shift + L</label>
+        </div>
+
+        <div class="question-box">
+            <p><b>3. What does VLOOKUP do?</b></p>
+            <label><input type="radio" name="q3" value="a"> Searches for a value in a column</label><br>
+            <label><input type="radio" name="q3" value="b"> Creates a chart</label><br>
+            <label><input type="radio" name="q3" value="c"> Sorts data</label>
+        </div>
+
+        <div class="question-box">
+            <p><b>4. Which chart is best for showing trends?</b></p>
+            <label><input type="radio" name="q4" value="a"> Pie chart</label><br>
+            <label><input type="radio" name="q4" value="b"> Column chart</label><br>
+            <label><input type="radio" name="q4" value="c"> Line chart</label>
+        </div>
+
+        <div class="question-box">
+            <p><b>5. What does Ctrl + Z do?</b></p>
+            <label><input type="radio" name="q5" value="a"> Redo</label><br>
+            <label><input type="radio" name="q5" value="b"> Undo</label><br>
+            <label><input type="radio" name="q5" value="c"> Save</label>
+        </div>
+
+        <button type="button" class="btn" onclick="submitQuiz()">Submit Quiz</button>
+    </form>
+
+    <div id="result"></div>
+
+</div>
+
+<footer>
+    © 2025 Learnlytics Academy — Free Excel & Data Analytics Training
+</footer>
+
+<script>
+function submitQuiz() {
+    let score = 0;
+
+    // Correct answers
+    const answers = {
+        q1: "b",
+        q2: "b",
+        q3: "a",
+        q4: "c",
+        q5: "b"
+    };
+
+    let form = document.forms["quizForm"];
+
+    for (let q in answers) {
+        if (form[q].value === answers[q]) {
+            score++;
+        }
+    }
+
+    document.getElementById("result").innerHTML =
+        "You scored " + score + " out of 5!";
+}
+</script>
+
+</body>
+</html>
