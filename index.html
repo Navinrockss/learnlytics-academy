@@ -1,177 +1,483 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <title>ExcelMastery Hub | Practical Excel Training & Assessment</title>
+  <meta name="description" content="Free Excel skills assessment and structured Excel courses from Beginner to Power Analyst. Learn formulas, dashboards, automation and real-world business applications." />
+  <meta name="keywords" content="Excel training, Excel course, Excel assessment, learn Excel, Excel dashboards, Excel formulas, Excel for business" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Learnlytics Academy | Free Excel & Data Analytics Course</title>
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <meta name="description" content="Learn Excel and Data Analytics for free with step-by-step lessons, clean explanations, dashboards, projects, and practice files. Master Excel from Beginner to Advanced.">
-    <meta name="keywords" content="excel course, free excel training, learn excel, data analytics course, pivot tables, vlookup tutorial, excel lessons, learn excel online, excel basics">
+  <style>
+    :root {
+      --bg: #050816;
+      --bg-elevated: #0c1020;
+      --primary: #00c389;
+      --primary-soft: rgba(0, 195, 137, 0.16);
+      --accent: #3b82f6;
+      --text-main: #f9fafb;
+      --text-muted: #9ca3af;
+      --border-subtle: rgba(148, 163, 184, 0.3);
+      --error: #f97373;
+      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.65);
+      --radius-lg: 18px;
+      --radius-pill: 999px;
+      --transition-fast: 180ms ease-out;
+    }
 
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Inter', Arial, sans-serif;
-            background: #ffffff;
-            color: #1A1A1A;
-            line-height: 1.6;
-        }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        header {
-            text-align: center;
-            padding: 60px 20px;
-        }
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #111827 0, #020617 42%, #020318 100%);
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
 
-        h1 {
-            font-size: 46px;
-            margin: 0;
-            font-weight: 700;
-            color: #0F3057;
-        }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-        h2 {
-            color: #0F3057;
-            font-size: 30px;
-            margin-top: 40px;
-        }
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
-        p {
-            font-size: 18px;
-            max-width: 700px;
-            margin: auto;
-        }
+    .page-shell {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 20px 16px 72px;
+    }
 
-        .container {
-            width: 90%;
-            max-width: 900px;
-            margin: auto;
-            padding-bottom: 60px;
-        }
+    /* Header / Nav */
 
-        .btn-primary {
-            display: inline-block;
-            margin-top: 25px;
-            padding: 12px 26px;
-            background: #FFCA28;
-            color: #0F3057;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 18px;
-        }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(to bottom, rgba(2, 6, 23, 0.95), rgba(2, 6, 23, 0.68), transparent);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.18);
+    }
 
-        .section {
-            padding: 20px 0;
-            border-bottom: 1px solid #eee;
-        }
+    .nav-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 14px 16px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
 
-        .list {
-            max-width: 700px;
-            margin: auto;
-            padding-left: 20px;
-        }
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
 
-        footer {
-            text-align: center;
-            padding: 30px;
-            margin-top: 40px;
-            background: #F4F7FB;
-            color: #0F3057;
-            font-size: 15px;
-        }
+    .logo-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 12px;
+      background: radial-gradient(circle at 20% 20%, #22c55e 0, #16a34a 28%, #0f766e 62%, #020617 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ecfdf5;
+      font-weight: 800;
+      font-size: 17px;
+      box-shadow: 0 14px 30px rgba(22, 163, 74, 0.6);
+    }
 
-        .courses-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 20px;
-            margin-top: 25px;
-        }
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
 
-        .course-card {
-            border: 1px solid #eaeaea;
-            padding: 20px;
-            border-radius: 12px;
-            background: #ffffff;
-        }
+    .logo-text span:first-child {
+      font-size: 15px;
+    }
 
-        .course-card h3 {
-            margin-top: 0;
-            color: #1E88E5;
-        }
+    .logo-text span:last-child {
+      font-size: 11px;
+      font-weight: 400;
+      color: var(--text-muted);
+    }
 
-        a {
-            color: #0F3057;
-        }
-    </style>
-</head>
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
 
-<body>
+    .nav-links a {
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      transition: background var(--transition-fast), border-color var(--transition-fast), color 150ms ease-out, transform 150ms ease-out;
+    }
 
-    <header>
-        <h1>Learnlytics Academy</h1>
-        <p>Your free self-learning platform to master Excel & Data Analytics, from beginner to job-ready level.</p>
-        <a href="courses.html" class="btn-primary">Start Learning Free</a>
-    </header>
+    .nav-links a::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.25), transparent 55%);
+      opacity: 0;
+      transition: opacity var(--transition-fast);
+    }
 
-    <div class="container">
+    .nav-links a:hover::before {
+      opacity: 1;
+    }
 
-        <div class="section">
-            <h2>Why Learnlytics Academy?</h2>
-            <p>We simplify Excel and Data Analytics with clean explanations, structured lessons, and real-world exercises designed for absolute beginners and working professionals.</p>
-        </div>
+    .nav-links a:hover {
+      color: #e5e7eb;
+      background: rgba(15, 23, 42, 0.74);
+      border-color: rgba(148, 163, 184, 0.4);
+      transform: translateY(-1px);
+    }
 
-        <div class="section">
-            <h2>Popular Courses</h2>
+    .nav-links a.nav-cta {
+      border-color: rgba(52, 211, 153, 0.65);
+      background: radial-gradient(circle at top, rgba(16, 185, 129, 0.14), rgba(6, 95, 70, 0.42));
+      color: #ecfdf5;
+      font-weight: 500;
+      padding-inline: 14px;
+    }
 
-            <div class="courses-grid">
+    .nav-links a.nav-cta:hover {
+      background: radial-gradient(circle at top, rgba(16, 185, 129, 0.34), rgba(6, 78, 59, 0.9));
+      border-color: rgba(34, 197, 94, 0.9);
+    }
 
-                <div class="course-card">
-                    <h3>Excel Basics</h3>
-                    <p>Learn formulas, formatting, tables, charts, and essential tools.</p>
-                    <a href="excel-basics.html">Start Course →</a>
-                </div>
+    @media (max-width: 720px) {
+      .nav-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .nav-links {
+        flex-wrap: wrap;
+      }
+    }
 
-                <div class="course-card">
-                    <h3>Advanced Excel</h3>
-                    <p>Master pivot tables, dashboards, XLOOKUP, automation & more.</p>
-                    <a href="advanced-excel.html">Start Course →</a>
-                </div>
+    /* Hero */
 
-                <div class="course-card">
-                    <h3>Data Analytics</h3>
-                    <p>Learn data cleaning, analysis, visualization, and reporting.</p>
-                    <a href="data-analytics.html">Start Course →</a>
-                </div>
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.4fr);
+      gap: 28px;
+      margin-top: 26px;
+      margin-bottom: 32px;
+      align-items: center;
+    }
 
-            </div>
-        </div>
+    .hero-tagline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(55, 65, 81, 0.8);
+      background: radial-gradient(circle at top left, rgba(74, 222, 128, 0.28), rgba(15, 23, 42, 0.9));
+      color: #bbf7d0;
+      margin-bottom: 12px;
+    }
 
-        <div class="section">
-            <h2>What You Will Learn</h2>
-            <ul class="list">
-                <li>Excel formulas & functions</li>
-                <li>Data cleaning & transformation</li>
-                <li>Pivot tables & dashboards</li>
-                <li>Advanced lookup & automation</li>
-                <li>Charts & storytelling</li>
-                <li>Business data analysis</li>
-                <li>Real-world projects</li>
-            </ul>
-        </div>
+    .hero-tagline span.badge-pill {
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: rgba(22, 163, 74, 0.35);
+      border: 1px solid rgba(74, 222, 128, 0.6);
+    }
 
-        <div class="section">
-            <h2>Practice Files</h2>
-            <p>Use our downloadable Excel files to apply what you learn.</p>
-            <a href="practice-files.html" class="btn-primary">Download Files</a>
-        </div>
+    .hero-title {
+      font-size: clamp(30px, 4vw, 36px);
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      margin-bottom: 10px;
+    }
 
-    </div>
+    .hero-title span.gradient {
+      background: linear-gradient(to right, #22c55e, #a3e635);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
 
-    <footer>
-        © 2025 Learnlytics Academy — Excel & Data Analytics Courses  
-    </footer>
+    .hero-subtitle {
+      font-size: 14px;
+      color: var(--text-muted);
+      max-width: 520px;
+      margin-bottom: 18px;
+    }
 
-</body>
-</html>
+    .hero-points {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 10px;
+      margin-bottom: 18px;
+      font-size: 12px;
+    }
+
+    .hero-point {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #e5e7eb;
+    }
+
+    .hero-point-icon {
+      width: 20px;
+      height: 20px;
+      border-radius: 999px;
+      border: 1px solid rgba(52, 211, 153, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      background: radial-gradient(circle at top, rgba(34, 197, 94, 0.35), rgba(15, 23, 42, 0.9));
+    }
+
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 9px 15px;
+      border-radius: var(--radius-pill);
+      font-size: 13px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: background var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+      background: transparent;
+      color: var(--text-main);
+    }
+
+    .btn-primary {
+      background: radial-gradient(circle at top, rgba(16, 185, 129, 0.28), rgba(6, 78, 59, 0.95));
+      border-color: rgba(45, 212, 191, 0.85);
+      box-shadow: 0 18px 40px rgba(16, 185, 129, 0.35);
+      font-weight: 500;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px) scale(1.01);
+      border-color: rgba(34, 197, 94, 1);
+      box-shadow: 0 18px 45px rgba(22, 163, 74, 0.55);
+      background: radial-gradient(circle at top, rgba(22, 163, 74, 0.6), rgba(4, 47, 46, 0.98));
+    }
+
+    .btn-ghost {
+      border-color: rgba(148, 163, 184, 0.5);
+      background: rgba(15, 23, 42, 0.8);
+      color: var(--text-muted);
+    }
+
+    .btn-ghost:hover {
+      color: #e5e7eb;
+      border-color: rgba(148, 163, 184, 0.9);
+      background: rgba(15, 23, 42, 0.96);
+      transform: translateY(-1px);
+    }
+
+    .hero-microtext {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    /* Hero right / stats and "screenshot" */
+
+    .hero-right {
+      border-radius: 24px;
+      padding: 14px;
+      background: radial-gradient(circle at top left, rgba(34, 197, 94, 0.1), rgba(15, 23, 42, 0.96));
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-ribbon {
+      position: absolute;
+      top: 16px;
+      right: -40px;
+      transform: rotate(32deg);
+      background: linear-gradient(to right, #22c55e, #16a34a, #0f766e);
+      padding: 4px 40px;
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #ecfdf5;
+      box-shadow: 0 10px 25px rgba(22, 163, 74, 0.55);
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin-bottom: 10px;
+      margin-top: 8px;
+      font-size: 11px;
+    }
+
+    .stat-chip {
+      border-radius: var(--radius-lg);
+      padding: 7px 9px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.45);
+    }
+
+    .stat-chip span:first-child {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .stat-chip strong {
+      display: block;
+      font-size: 14px;
+      margin-top: 3px;
+    }
+
+    .hero-sheet {
+      margin-top: 10px;
+      border-radius: 18px;
+      background: radial-gradient(circle at top left, rgba(34, 197, 94, 0.1), rgba(15, 23, 42, 0.98));
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      overflow: hidden;
+      font-size: 11px;
+    }
+
+    .sheet-header {
+      display: flex;
+      align-items: center;
+      padding: 8px 10px;
+      background: radial-gradient(circle at top left, rgba(55, 65, 81, 0.9), rgba(15, 23, 42, 1));
+      border-bottom: 1px solid rgba(148, 163, 184, 0.45);
+    }
+
+    .sheet-dots {
+      display: flex;
+      gap: 4px;
+      margin-right: 8px;
+    }
+
+    .sheet-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: rgba(148, 163, 184, 0.75);
+    }
+
+    .sheet-dot:nth-child(1) { background:#ef4444; }
+    .sheet-dot:nth-child(2) { background:#f59e0b; }
+    .sheet-dot:nth-child(3) { background:#22c55e; }
+
+    .sheet-title {
+      font-size: 11px;
+      color: #e5e7eb;
+    }
+
+    .sheet-body {
+      padding: 8px 10px 12px;
+    }
+
+    .sheet-table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      font-size: 11px;
+    }
+
+    .sheet-table th,
+    .sheet-table td {
+      border: 1px solid rgba(75, 85, 99, 0.9);
+      padding: 5px 4px;
+      text-align: left;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .sheet-table th {
+      background: rgba(15, 23, 42, 0.9);
+      font-weight: 500;
+      color: #d1fae5;
+    }
+
+    .sheet-table tr:nth-child(even) td {
+      background: rgba(15, 23, 42, 0.8);
+    }
+
+    .sheet-pill {
+      border-radius: 999px;
+      padding: 1px 6px;
+      border: 1px solid rgba(34, 197, 94, 0.6);
+      background: rgba(22, 163, 74, 0.25);
+      font-size: 10px;
+      color: #bbf7d0;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    /* Shared section styling */
+
+    section {
+      margin-bottom: 36px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 14px;
+    }
+
+    .section-title {
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+    }
+
+    .section-kicker {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--accent);
+    }
+
+    .section-sub {
