@@ -1,199 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Excel Basics | Learnlytics Academy</title>
+<title>Excel Basics Course | Learnlytics Academy</title>
 
-    <meta name="description" content="Learn Excel Basics with simple explanations and detailed step-by-step lessons. Perfect for beginners. Includes practice files, formulas, tables, charts, and data cleaning.">
-    <meta name="keywords" content="excel basics, excel for beginners, learn excel, excel tutorial, excel formulas, excel course free">
+<meta name="description" content="Full Excel Basics Course: Learn Excel step by step from scratch. Includes formulas, formatting, tables, charts, projects, and quizzes. Perfect for beginners.">
 
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Inter', Arial, sans-serif;
-            background: #ffffff;
-            color: #1A1A1A;
-            line-height: 1.7;
-        }
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Inter', Arial, sans-serif;
+        background: #ffffff;
+        color: #1A1A1A;
+        line-height: 1.7;
+    }
 
-        header {
-            text-align: center;
-            padding: 40px 20px;
-            border-bottom: 1px solid #eee;
-        }
+    header {
+        text-align: center;
+        padding: 40px 20px;
+        border-bottom: 1px solid #eee;
+    }
 
-        h1 {
-            font-size: 40px;
-            margin: 0;
-            color: #0F3057;
-        }
+    h1 {
+        font-size: 40px;
+        margin: 0;
+        color: #0F3057;
+    }
 
-        h2 {
-            color: #0F3057;
-            margin-top: 40px;
-        }
+    h2 {
+        font-size: 32px;
+        color: #0F3057;
+        margin-top: 40px;
+    }
 
-        h3 {
-            color: #1E88E5;
-            margin-top: 30px;
-        }
+    h3 {
+        color: #1E88E5;
+        margin-top: 30px;
+    }
 
-        p {
-            max-width: 900px;
-            margin: auto;
-            font-size: 18px;
-        }
+    p, ul {
+        max-width: 900px;
+        margin: auto;
+        font-size: 18px;
+    }
 
-        .container {
-            width: 90%;
-            max-width: 900px;
-            margin: auto;
-            padding-bottom: 80px;
-        }
+    .container {
+        width: 90%;
+        max-width: 900px;
+        margin: auto;
+        padding-bottom: 60px;
+    }
 
-        .btn {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 12px 20px;
-            background: #FFCA28;
-            color: #0F3057;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-        }
+    .btn {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 12px 20px;
+        background: #FFCA28;
+        color: #0F3057;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 600;
+    }
 
-        .divider {
-            height: 1px;
-            background: #eee;
-            margin: 40px 0;
-        }
+    .divider {
+        height: 1px;
+        background: #eee;
+        margin: 40px 0;
+    }
 
-        ul {
-            max-width: 900px;
-            margin: auto;
-            padding-left: 20px;
-        }
+    .question-box {
+        background: #F4F7FB;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        border: 1px solid #ddd;
+    }
 
-        footer {
-            text-align: center;
-            background: #F4F7FB;
-            padding: 30px;
-            font-size: 14px;
-            color: #0F3057;
-            margin-top: 40px;
-        }
+    .btn-quiz {
+        display: block;
+        margin: 20px auto;
+        width: 200px;
+        padding: 12px;
+        background: #1E88E5;
+        border: none;
+        color: white;
+        border-radius: 8px;
+        font-size: 18px;
+        cursor: pointer;
+    }
 
-        .adsense-space {
-            background: #f2f2f2;
-            border: 1px dashed #ccc;
-            padding: 20px;
-            text-align: center;
-            margin: 30px 0;
-            color: #666;
-            font-size: 14px;
-        }
-    </style>
+    footer {
+        text-align: center;
+        padding: 25px;
+        background: #F4F7FB;
+        font-size: 14px;
+        margin-top: 40px;
+        color: #0F3057;
+    }
+
+</style>
+
 </head>
-
 <body>
 
 <header>
-    <h1>Excel Basics</h1>
-    <p>Your beginner-friendly introduction to Excel functions, tables, charts, and essential tools.</p>
+    <h1>Excel Basics Course</h1>
+    <p>Learn Excel step by step with simple explanations, examples, and quizzes.</p>
 </header>
 
 <div class="container">
 
-    <!-- SIMPLE INTRO SECTION -->
-    <h2>Quick Summary (Simple Explanation)</h2>
-    <p>
-        Excel Basics helps you understand how to use spreadsheets, write simple formulas,
-        clean data, and create charts. You’ll learn everything needed to start working
-        with data comfortably.
-    </p>
+    <!-- INTRO -->
+    <h2>Lesson 1 — Introduction to Excel</h2>
+    <p>Excel is a spreadsheet tool used to work with numbers, data, and analysis. It is widely used in all industries including business, finance, HR, sales, marketing, data analysis, and more.</p>
 
-    <a class="btn" href="practice-files.html">Download Practice Files</a>
+    <h3>Excel Interface</h3>
+    <ul>
+        <li><b>Workbook</b> — Excel file that holds sheets</li>
+        <li><b>Worksheet</b> — A spreadsheet page</li>
+        <li><b>Rows & Columns</b> — Structure of Excel</li>
+        <li><b>Cells</b> — Intersection of a row & column</li>
+        <li><b>Ribbon</b> — Toolbar with buttons</li>
+    </ul>
 
-    <div class="adsense-space">AdSense Space (Auto Ads will show here)</div>
-
-    <!-- DETAILED SECTION -->
     <div class="divider"></div>
 
-    <h2>Full Detailed Lesson (SEO Optimized)</h2>
+    <!-- FORMULAS -->
+    <h2>Lesson 2 — Basic Formulas</h2>
 
-    <h3>1. What is Excel?</h3>
-    <p>
-        Excel is a spreadsheet software used to store, organize, analyze, and visualize data.
-        It is one of the most in-demand skills for jobs in business, finance, sales,
-        marketing, engineering, HR, operations, and data analytics.
-    </p>
-
-    <h3>2. Excel Interface Overview</h3>
+    <h3>Most Common Formulas</h3>
     <ul>
-        <li>Workbook → File containing multiple sheets</li>
-        <li>Worksheet → Individual spreadsheet page</li>
-        <li>Cells → Small boxes where you enter data</li>
-        <li>Rows & Columns → Structure of the data</li>
-        <li>Ribbon → Toolbar with options and features</li>
+        <li><b>=SUM()</b></li>
+        <li><b>=AVERAGE()</b></li>
+        <li><b>=MIN()</b></li>
+        <li><b>=MAX()</b></li>
+        <li><b>=COUNT()</b></li>
     </ul>
 
-    <h3>3. Basic Excel Formulas</h3>
-    <p>Start with the most important formulas every beginner must know:</p>
+    <h3>Cell References</h3>
     <ul>
-        <li><b>=SUM()</b> → Add numbers</li>
-        <li><b>=AVERAGE()</b> → Calculate the mean</li>
-        <li><b>=MIN()</b> → Smallest value</li>
-        <li><b>=MAX()</b> → Largest value</li>
-        <li><b>=COUNT()</b> → Count numbers</li>
+        <li><b>A1</b> — Row 1, Column A</li>
+        <li><b>$A$1</b> — Absolute reference</li>
+        <li><b>A$1 / $A1</b> — Mixed</li>
     </ul>
 
-    <div class="adsense-space">AdSense Space (In-article ad)</div>
+    <div class="divider"></div>
 
-    <h3>4. Formatting Data</h3>
+    <!-- FORMATTING -->
+    <h2>Lesson 3 — Formatting</h2>
+    <p>Formatting makes your data readable and professional.</p>
+
     <ul>
-        <li>Bold, italic, colors</li>
-        <li>Number formatting</li>
-        <li>Text alignment</li>
-        <li>Cell borders</li>
-        <li>AutoFit rows/columns</li>
+        <li>Bold / Italic / Underline</li>
+        <li>Alignment (Left/Center/Right)</li>
+        <li>Colors & cell shading</li>
+        <li>Number formatting (%, currency, date)</li>
+        <li>Borders</li>
+        <li>AutoFit Columns (Double-click column border)</li>
     </ul>
 
-    <h3>5. Working With Tables</h3>
-    <p>Excel tables make data easier to filter, sort and format. You can create one using:</p>
-    <p><b>Ctrl + T</b></p>
+    <div class="divider"></div>
 
-    <h3>6. Creating Charts</h3>
-    <p>Start with simple charts:</p>
+    <!-- TABLES -->
+    <h2>Lesson 4 — Tables</h2>
+    <p>Tables automatically add filters, formatting, and structure.</p>
+
+    <p><b>Shortcut: Ctrl + T</b></p>
+
     <ul>
-        <li>Column chart</li>
-        <li>Bar chart</li>
-        <li>Line chart</li>
-        <li>Pie chart</li>
+        <li>Sortable columns</li>
+        <li>Filter menu</li>
+        <li>Table styling</li>
+        <li>Structured references</li>
     </ul>
 
-    <h3>7. Mini Project (Beginner Friendly)</h3>
-    <p>Create a sales report with:</p>
+    <div class="divider"></div>
+
+    <!-- CHARTS -->
+    <h2>Lesson 5 — Charts</h2>
+
+    <ul>
+        <li>Column Chart</li>
+        <li>Bar Chart</li>
+        <li>Line Chart</li>
+        <li>Pie Chart</li>
+    </ul>
+
+    <p><b>Select data → Insert → Chart</b></p>
+
+    <div class="divider"></div>
+
+    <!-- PROJECT -->
+    <h2>Lesson 6 — Mini Project</h2>
+
+    <p>Create a Sales Summary:</p>
     <ul>
         <li>Product list</li>
-        <li>Prices</li>
-        <li>Sales numbers</li>
-        <li>Total using =SUM()</li>
-        <li>A column chart of monthly sales</li>
+        <li>Quantity sold</li>
+        <li>Price</li>
+        <li>Total = Quantity × Price</li>
+        <li>Create a Column Chart</li>
     </ul>
 
-    <div class="adsense-space">AdSense Space (Bottom ad)</div>
+    <a class="btn" href="practice-files.html">Download Project File</a>
 
-    <!-- NEXT STEPS -->
-    <h2>Next Lesson</h2>
+    <div class="divider"></div>
+
+    <!-- QUIZ -->
+    <h2>Excel Basics Quiz</h2>
+
+    <form id="quizForm">
+
+        <div class="question-box">
+            <p><b>1. What is the shortcut to create a table?</b></p>
+            <label><input type="radio" name="q1" value="a"> Ctrl + A</label><br>
+            <label><input type="radio" name="q1" value="b"> Ctrl + T</label><br>
+            <label><input type="radio" name="q1" value="c"> Ctrl + Z</label>
+        </div>
+
+        <div class="question-box">
+            <p><b>2. Which formula finds the largest number?</b></p>
+            <label><input type="radio" name="q2" value="a"> SUM</label><br>
+            <label><input type="radio" name="q2" value="b"> AVERAGE</label><br>
+            <label><input type="radio" name="q2" value="c"> MAX</label>
+        </div>
+
+        <div class="question-box">
+            <p><b>3. What does AutoFit do?</b></p>
+            <label><input type="radio" name="q3" value="a"> Adds borders</label><br>
+            <label><input type="radio" name="q3" value="b"> Resizes column width</label><br>
+            <label><input type="radio" name="q3" value="c"> Deletes data</label>
+        </div>
+
+        <button type="button" class="btn-quiz" onclick="submitQuiz()">Submit Quiz</button>
+    </form>
+
+    <h3 id="result"></h3>
+
+    <script>
+        function submitQuiz() {
+            let score = 0;
+
+            const answers = { q1: "b", q2: "c", q3: "b" };
+
+            let form = document.forms["quizForm"];
+
+            for (let q in answers) {
+                if (form[q].value === answers[q]) {
+                    score++;
+                }
+            }
+
+            document.getElementById("result").innerHTML =
+                "Your Score: " + score + " / 3";
+        }
+    </script>
+
+    <div class="divider"></div>
+
+    <h2>Next Course</h2>
     <a class="btn" href="excel-intermediate.html">Go To Excel Intermediate →</a>
 
 </div>
 
 <footer>
-    © 2025 Learnlytics Academy — Free Excel & Data Analytics Lessons
+    © 2025 Learnlytics Academy — Free Excel & Data Analytics Courses
 </footer>
 
 </body>
